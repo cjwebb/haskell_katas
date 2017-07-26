@@ -6,7 +6,7 @@ THIS_FILE := $(lastword $(MAKEFILE_LIST))
 .DEFAULT_GOAL := help
 
 test: ## Runs the tests
-	@$(foreach file,$(FILES), runhaskell $(file) -f progress;)
+	@$(foreach file,$(FILES), stack runhaskell $(file);)
 
 
 .PHONY: test help
